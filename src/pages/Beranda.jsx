@@ -277,7 +277,7 @@ export default function Beranda() {
                         <div key={index} className="col-md-3 col-6 mb-3">
                             <div>
                                 <Link className="card shadow text-decoration-none mb-3 mt-3 clickAnimation" onClick={() => modeShow(manga.slug)} >
-                                    <img src={manga.gambar} height={"350"} className="card-img-top" alt={manga.judul} />
+                                    <img src={manga.gambar} className="card-img-top" alt={manga.judul} />
                                     <div className="card-body">
                                         <h5 className="card-title">{manga.judul.length > 20 ? manga.judul.substring(0, 20) + "..." : manga.judul}</h5>
                                         <p className="card-text text-secondary">{manga.genre}</p>
@@ -341,7 +341,7 @@ export default function Beranda() {
                                 <div key={index} className="col-md-3 col-6 mb-3">
                                     <div>
                                         <div className="card shadow text-decoration-none" >
-                                            <img src={manga.gambar} height={"350"} onClick={() => modeChapterHistory(manga.slug, manga.slugChapter)} className="card-img-top" alt="tesst" />
+                                            <img src={manga.gambar} onClick={() => modeChapterHistory(manga.slug, manga.slugChapter)} className="card-img-top" alt="tesst" />
                                             <div className="card-body">
                                                 <h5 className="card-title" onClick={() => nav(`/manga/${manga.slug}/${manga.slugChapter}`)} >{manga.judul.length > 20 ? manga.judul.substring(0, 20) + "..." : manga.judul}</h5>
                                                 <div className="d-inline badge bg-success" onClick={() => nav(`/manga/${manga.slug}/${manga.slugChapter}`)} >Chapter {(manga.slugChapter).split("chapter-")[1].replace(/-/g, '.')}</div>

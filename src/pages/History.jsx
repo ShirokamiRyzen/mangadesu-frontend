@@ -19,7 +19,7 @@ export default function History () {
             <div key={index} className="col-md-3 col-6 mb-3">
                 <div>
                     <div className="card shadow text-decoration-none" >
-                        <img src={manga.gambar} height={"350"} onClick={() => nav(`/manga/${manga.slug}/${manga.slugChapter}`)} className="card-img-top" alt="tesst" />
+                        <img src={manga.gambar} onClick={() => nav(`/manga/${manga.slug}/${manga.slugChapter}`)} className="card-img-top" alt="tesst" />
                         <div className="card-body">
                             <h5 className="card-title" onClick={() => nav(`/manga/${manga.slug}/${manga.slugChapter}`)} >{manga.judul.length > 20 ? manga.judul.substring(0,20) + "..." : manga.judul}</h5>
                             <div className="d-inline badge bg-success" onClick={() => nav(`/manga/${manga.slug}/${manga.slugChapter}`)} >Chapter {(manga.slugChapter).split("-").slice(-1)[0]}</div>
