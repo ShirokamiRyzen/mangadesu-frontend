@@ -1,0 +1,119 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.ryzen-popup-close-button {
+  align-self: flex-start;
+  margin-left: auto;
+  padding: 5px 10px;
+}
+
+.clickAnimation {
+  transition: transform 0.2s;
+}
+
+@media (min-width: 769px) {
+  .clickAnimation:hover {
+    transform: scale(1.05);
+  }
+}
+
+.clickAnimation:active {
+  transform: scale(0.95);
+}
+
+.clickAnimation-list {
+  transition: transform 0.2s;
+}
+
+@media (min-width: 769px) {
+  .clickAnimation-list:hover {
+    transform: scale(1.02);
+  }
+}
+
+.clickAnimation-list:active {
+  transform: scale(0.95);
+}
+
+.notification {
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 9999;
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.closeButton {
+  align-self: flex-end;
+  color: gray;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  margin-right: 0.5rem;
+}
+
+.downloadButton {
+  background-color: blue;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.nav-link.active i,
+.nav-link.active span {
+  color: rgb(245, 59, 59);
+}
+
+body.swal2-shown > [aria-hidden='true'] {
+  transition: 0.1s filter;
+  filter: blur(3px);
+}
+
+.navbar-logo {
+  width: 100px;
+}
+
+@media (min-width: 768px) {
+  .navbar-logo {
+    width: 180px;
+  }
+}
